@@ -1,9 +1,9 @@
-# TEM Image Strain Analysis Tool-PyNanospacing
+# TEM Image Strain Analysis Tool - PyNanoSpacing
 
 ---
 
 ## Introduction  
-This software tool written entirely in python 3.11 enables the analysis of interplanar spacing distortions in transmission electron microscopy (TEM) images. It extracts atomic layer distances, calculates strain percentages, and visualizes strain distributions through color mapping.
+This software tool, written entirely in Python 3.11, enables the analysis of interplanar spacing distortions in transmission electron microscopy (TEM) images. It extracts atomic layer distances, calculates strain, and visualizes the results, making it easier to study and understand the material properties at the nanoscale.
 
 ## Features  
 - **OCR-based Scale Detection:** Automatically extracts the scale from the image ruler.  
@@ -13,7 +13,8 @@ This software tool written entirely in python 3.11 enables the analysis of inter
 - **Export Options:** Allows saving results in both image and Excel formats.  
 
 ## Setup and Installation  
-1. Create a Conda Environment
+1. Ensure you have `conda` installed on your system.
+2. Create a Conda Environment:
 
 ```bash
 conda create --name tem-strain python=3.11.5
@@ -34,12 +35,12 @@ pip install -r requirements.txt
    python app.py
 ```
 
-1. Upload a TEM image for processing.
-2. The ruler in the image is detected and used to extract the scale.
-3. Manually select the region of interest (ROI) by clicking on the desired atomic region.
-4. Enter the reference interplanar spacing value for accurate calculations.
-5. The program calculates atomic distances, applies strain analysis, and visualizes the results.
-6. Processed images and calculated strain values can be saved for further analysis.
+2. Upload a TEM image for processing.
+3. The ruler in the image is detected and used to extract the scale.
+4. Manually select the region of interest (ROI) by clicking on the desired atomic region.
+5. Enter the reference interplanar spacing value for accurate calculations.
+6. The program calculates atomic distances, applies strain analysis, and visualizes the results.
+7. Processed images and calculated strain values can be saved for further analysis.
 
 
 ## Strain Calculation Method
@@ -63,5 +64,4 @@ The tool provides:
 ✅ An interactive workflow with real-time strain visualization.
 
 ## Documentation & Video Guide
-📹 An instructional video guide are included in the repository for reference.
-
+📹 An instructional video guide is included in the repository for reference. You can find the documentation and video guide here (https://github.com/malisarsil/PyNanoSpacing/blob/main/instruction_video.mp4).
