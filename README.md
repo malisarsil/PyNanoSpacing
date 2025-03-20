@@ -15,22 +15,37 @@ The core functionality of the tool includes the extraction of atomic layer dista
 - **Export Options:** Allows saving results in both image and Excel formats.  
 
 ## Setup and Installation  
-1. Ensure you have `conda` installed on your system.
-2. Create a Conda Environment:
+Open a terminal session and navigate to the folder where you want to install the application.
+
+0. Clone the repository. 
+```bash
+git clone https://github.com/malisarsil/PyNanoSpacing.git
+```
+
+1. Get to the installed directory.
+
+```bash
+cd PyNanoSpacing
+```
+
+2. Ensure you have `conda` installed on your system.
+
+3. Create a Conda Environment:
 
 ```bash
 conda create --name tem-strain python=3.11.5
 conda activate tem-strain
 ```
 
-2. To install the required dependencies, run:  
+4. To install the required dependencies, run:  
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Usage  
-3. To run the application, follow these steps:
+
+To run the application, follow these steps:
 
 1. **Run the application:**
    
@@ -68,5 +83,10 @@ The tool provides:
 
 ✅ An interactive workflow with real-time strain visualization.
 
+
 ## Documentation & Video Guide
 📹 An instructional video guide is included in the repository for reference. You can find the documentation and video guide here (https://github.com/malisarsil/PyNanoSpacing/blob/main/instruction_video.mp4).
+
+
+## Additional Notes 
+Upon the first use, the application needs to download several artificial intelligence model weights. The download duration depends on your network connection, typically taking 1-2 minutes. This process is visible in the terminal. Once completed, the models are stored locally, and subsequent uses of the program will not require this download, eliminating the need to wait during later sessions.
