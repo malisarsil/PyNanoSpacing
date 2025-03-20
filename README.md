@@ -3,7 +3,9 @@
 ---
 
 ## Introduction  
-This software tool, written entirely in Python 3.11, enables the analysis of interplanar spacing distortions in transmission electron microscopy (TEM) images. It extracts atomic layer distances, calculates strain, and visualizes the results, making it easier to study and understand the material properties at the nanoscale.
+This software tool, developed in Python 3.11, facilitates the transformation of Transmission Electron Microscopy (TEM) images into color-mapped strain indicator images. By utilizing advanced image processing algorithms and artificial intelligence (AI) modules, the tool allows users to effortlessly generate the strain map by simply setting up the environment and executing the command `python app.py`. This will launch a user-friendly interface, guiding the user through the process.
+
+The core functionality of the tool includes the extraction of atomic layer distances, strain calculation, and the visualization of the results. This approach significantly enhances the study of material properties at the nanoscale, providing valuable insights into the structural characteristics of the material under examination.
 
 ## Features  
 - **OCR-based Scale Detection:** Automatically extracts the scale from the image ruler.  
@@ -36,23 +38,26 @@ pip install -r requirements.txt
 ```
 
 2. Upload a TEM image for processing.
-3. The ruler in the image is detected and used to extract the scale.
-4. Manually select the region of interest (ROI) by clicking on the desired atomic region.
-5. Enter the reference interplanar spacing value for accurate calculations.
-6. The program calculates atomic distances, applies strain analysis, and visualizes the results.
-7. Processed images and calculated strain values can be saved for further analysis.
+3. The ruler in the image is automatically detected and used to extract the scale. In cases where the ruler length is not detected accurately, the user has the option to manually input the value (e.g., entering "2" for a 2 nm resolution).
+4. Enter the reference interplanar spacing value to ensure accurate calculations. This reference value serves as the basis for determining the compression and expansion rates, which are critical for strain analysis.
+5. Manually select the region of interest (ROI) by clicking on the desired atomic area. This selected region is then processed by the "Segment Anything" model to identify the atomic region boundaries.
+6. The program calculates atomic distances, performs strain analysis, and visualizes the results through color-mapping. Users can save the resulting image, as well as the histogram image that depicts strain level percentages and their corresponding counts. Additionally, the strain percentages and counts can be exported to an Excel file. 
+7. Processed images and calculated strain values can be saved for subsequent analysis.
 
 
 ## Strain Calculation Method
-The tool compares detected atomic distances to a known reference value.
-The strain percentage is computed as:
+The tool compares detected atomic distances to a known reference value. The strain percentage is computed using the following formula:
 
-Strain = 
+**Strain** = \(\frac{d_p - d_s}{d_s} \times 100\)
+
+Where:
+- \(d_p\) represents the strained interplanar spacing.
+- \(d_s\) is the unstrained interplanar spacing of the bulk (the reference).
+
+  
 A color-mapped strain visualization is generated, where:
-
 Red represents expansion (positive strain).
 Green represents compression (negative strain).
-
 
 ## Results
 The tool provides:
