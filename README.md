@@ -20,6 +20,7 @@ The core functionality of the tool includes the extraction of atomic layer dista
 
 ```bash
 conda create --name tem-strain python=3.11.5
+conda activate tem-strain
 ```
 
 2. To install the required dependencies, run:  
