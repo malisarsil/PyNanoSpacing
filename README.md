@@ -48,12 +48,11 @@ pip install -r requirements.txt
 ## Strain Calculation Method
 The tool compares detected atomic distances to a known reference value. The strain percentage is computed using the following formula:
 
-**Strain** = \(\frac{d_p - d_s}{d_s} \times 100\)
+**Strain** = (dₚ - dₛ) / dₛ × 100
 
 Where:
-- \(d_p\) represents the strained interplanar spacing.
-- \(d_s\) is the unstrained interplanar spacing of the bulk (the reference).
-
+- **dₚ** represents the strained interplanar spacing.
+- **dₛ** is the unstrained interplanar spacing of the bulk (the reference).
   
 A color-mapped strain visualization is generated, where:
 Red represents expansion (positive strain).
